@@ -1,0 +1,1928 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Happy Birthday Cellin 💗</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+
+            overflow: hidden;
+
+            font-family:
+                "Trebuchet MS",
+                "Segoe UI",
+                sans-serif;
+
+            color: #5b4266;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd6e7,
+                    #e5d7ff,
+                    #cdefff
+                );
+        }
+
+
+        /* ===============================
+           BACKGROUND
+        =============================== */
+
+        .background {
+
+            position: fixed;
+            inset: 0;
+
+            overflow: hidden;
+
+            z-index: 0;
+        }
+
+
+        .moon {
+
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+
+            right: 8%;
+            top: 8%;
+
+            border-radius: 50%;
+
+            background: #fff7d6;
+
+            box-shadow:
+                0 0 40px
+                rgba(255,255,255,.8);
+        }
+
+
+        /* ===============================
+           BINTANG
+        =============================== */
+
+        .stars {
+
+            position: absolute;
+            inset: 0;
+        }
+
+
+        .star {
+
+            position: absolute;
+
+            width: 5px;
+            height: 5px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 8px white,
+                0 0 15px #fff;
+
+            animation:
+                starMove
+                linear infinite;
+        }
+
+
+        @keyframes starMove {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    scale(.5)
+                    rotate(0deg);
+
+                opacity: .2;
+            }
+
+            50% {
+
+                opacity: 1;
+
+                transform:
+                    translateY(-30px)
+                    scale(1.4)
+                    rotate(180deg);
+            }
+
+            100% {
+
+                transform:
+                    translateY(-70px)
+                    scale(.5)
+                    rotate(360deg);
+
+                opacity: .1;
+            }
+        }
+
+
+        /* ===============================
+           AWAN
+        =============================== */
+
+        .cloud {
+
+            position: absolute;
+
+            width: 140px;
+            height: 45px;
+
+            background:
+                rgba(255,255,255,.65);
+
+            border-radius: 50px;
+
+            animation:
+                cloudMove
+                linear infinite;
+        }
+
+
+        .cloud::before,
+        .cloud::after {
+
+            content: "";
+
+            position: absolute;
+
+            background:
+                rgba(255,255,255,.65);
+
+            border-radius: 50%;
+        }
+
+
+        .cloud::before {
+
+            width: 65px;
+            height: 65px;
+
+            left: 25px;
+            bottom: 10px;
+        }
+
+
+        .cloud::after {
+
+            width: 80px;
+            height: 80px;
+
+            right: 20px;
+            bottom: 5px;
+        }
+
+
+        .cloud.one {
+
+            top: 18%;
+            left: -180px;
+
+            animation-duration: 35s;
+        }
+
+
+        .cloud.two {
+
+            top: 55%;
+            left: -200px;
+
+            transform: scale(.7);
+
+            animation-duration: 45s;
+
+            animation-delay: 8s;
+        }
+
+
+        @keyframes cloudMove {
+
+            from {
+                transform:
+                    translateX(0);
+            }
+
+            to {
+                transform:
+                    translateX(130vw);
+            }
+
+        }
+
+
+        /* ===============================
+           APP
+        =============================== */
+
+        .app {
+
+            position: relative;
+
+            z-index: 10;
+
+            width: 100%;
+            height: 100vh;
+        }
+
+
+        .screen {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform:
+                scale(.9);
+
+            transition:
+                .8s ease;
+        }
+
+
+        .screen.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                scale(1);
+        }
+
+
+        /* ===============================
+           OPENING CARD
+        =============================== */
+
+        .card {
+
+            width:
+                min(440px, 100%);
+
+            padding:
+                35px 25px;
+
+            text-align: center;
+
+            border-radius:
+                35px;
+
+            background:
+                rgba(255,255,255,.65);
+
+            backdrop-filter:
+                blur(15px);
+
+            border:
+                3px solid
+                rgba(255,255,255,.8);
+
+            box-shadow:
+                0 20px 60px
+                rgba(100,70,130,.2);
+        }
+
+
+        /* ===============================
+           BERUANG
+        =============================== */
+
+        .bear {
+
+            position: relative;
+
+            width: 125px;
+            height: 125px;
+
+            margin:
+                0 auto 20px;
+
+            border-radius: 50%;
+
+            background: #c98b5b;
+
+            box-shadow:
+                inset
+                -10px -15px
+                rgba(120,70,40,.15);
+
+            animation:
+                bearBounce
+                2s ease-in-out infinite;
+        }
+
+
+        .ear {
+
+            position: absolute;
+
+            width: 45px;
+            height: 45px;
+
+            top: -5px;
+
+            border-radius: 50%;
+
+            background: #b8794e;
+        }
+
+
+        .ear.left {
+            left: 5px;
+        }
+
+
+        .ear.right {
+            right: 5px;
+        }
+
+
+        .ear::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 25px;
+            height: 25px;
+
+            left: 10px;
+            top: 10px;
+
+            border-radius: 50%;
+
+            background: #f2b9a0;
+        }
+
+
+        .eye {
+
+            position: absolute;
+
+            width: 12px;
+            height: 16px;
+
+            top: 48px;
+
+            border-radius: 50%;
+
+            background: #38252b;
+        }
+
+
+        .eye.left {
+            left: 37px;
+        }
+
+
+        .eye.right {
+            right: 37px;
+        }
+
+
+        .nose {
+
+            position: absolute;
+
+            width: 22px;
+            height: 17px;
+
+            top: 70px;
+            left: 51px;
+
+            border-radius: 50%;
+
+            background: #493035;
+        }
+
+
+        .mouth {
+
+            position: absolute;
+
+            width: 25px;
+            height: 13px;
+
+            left: 50px;
+            top: 84px;
+
+            border-bottom:
+                3px solid #493035;
+
+            border-radius:
+                0 0 50% 50%;
+        }
+
+
+        .blush {
+
+            position: absolute;
+
+            width: 25px;
+            height: 12px;
+
+            top: 73px;
+
+            border-radius: 50%;
+
+            background: #f28e9d;
+
+            opacity: .7;
+        }
+
+
+        .blush.left {
+            left: 17px;
+        }
+
+
+        .blush.right {
+            right: 17px;
+        }
+
+
+        @keyframes bearBounce {
+
+            0%,100% {
+
+                transform:
+                    translateY(0)
+                    rotate(-2deg);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-10px)
+                    rotate(2deg);
+            }
+
+        }
+
+
+        /* ===============================
+           TEXT OPENING
+        =============================== */
+
+        .small {
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #9d7aae;
+
+            margin-bottom: 8px;
+        }
+
+
+        h1 {
+
+            font-size:
+                clamp(
+                    32px,
+                    8vw,
+                    52px
+                );
+
+            line-height: 1.1;
+
+            color: #ff6fae;
+        }
+
+
+        .subtitle {
+
+            margin:
+                15px 0 25px;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: #725878;
+        }
+
+
+        /* ===============================
+           BUTTON
+        =============================== */
+
+        .btn {
+
+            border: none;
+
+            padding:
+                15px 30px;
+
+            border-radius:
+                999px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff70ad,
+                    #a980ff
+                );
+
+            box-shadow:
+                0 10px 25px
+                rgba(255,100,170,.35);
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.05);
+        }
+
+
+        .btn:active {
+
+            transform:
+                scale(.95);
+        }
+
+
+        /* ===============================
+           BIRTHDAY
+        =============================== */
+
+        .birthday {
+
+            width:
+                min(650px, 100%);
+
+            max-height:
+                95vh;
+
+            overflow-y:
+                auto;
+
+            scrollbar-width:
+                none;
+
+            text-align:
+                center;
+        }
+
+
+        .birthday::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .birthday-title {
+
+            font-size:
+                clamp(
+                    45px,
+                    12vw,
+                    85px
+                );
+
+            font-weight: 900;
+
+            line-height: .95;
+
+            color: #ff62a6;
+
+            text-shadow:
+                3px 4px 0 #fff;
+        }
+
+
+        .name {
+
+            margin-top: 15px;
+
+            font-size:
+                clamp(
+                    23px,
+                    6vw,
+                    35px
+                );
+
+            color: #78528c;
+
+            font-weight: bold;
+        }
+
+
+        /* ===============================
+           CAKE
+        =============================== */
+
+        .cake-area {
+
+            position: relative;
+
+            width: 230px;
+            height: 190px;
+
+            margin:
+                25px auto 15px;
+        }
+
+
+        .cake {
+
+            position: absolute;
+
+            width: 190px;
+            height: 90px;
+
+            bottom: 15px;
+            left: 20px;
+
+            border-radius:
+                15px 15px 25px 25px;
+
+            background:
+                linear-gradient(
+                    #ffb4cf,
+                    #ff76aa
+                );
+
+            box-shadow:
+                0 15px 20px
+                rgba(100,60,100,.2);
+        }
+
+
+        .cake::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -18px;
+
+            width: 100%;
+            height: 35px;
+
+            border-radius: 50%;
+
+            background: #fff;
+        }
+
+
+        .candle {
+
+            position: absolute;
+
+            width: 12px;
+            height: 50px;
+
+            top: -62px;
+
+            border-radius: 6px;
+
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    #fff,
+                    #fff 5px,
+                    #a98bff 5px,
+                    #a98bff 10px
+                );
+        }
+
+
+        .candle.one {
+            left: 50px;
+        }
+
+
+        .candle.two {
+            left: 89px;
+        }
+
+
+        .candle.three {
+            right: 50px;
+        }
+
+
+        .fire {
+
+            position: absolute;
+
+            width: 17px;
+            height: 24px;
+
+            top: -27px;
+            left: -2px;
+
+            border-radius:
+                50% 50% 50% 0;
+
+            transform:
+                rotate(-45deg);
+
+            background:
+                #ffd166;
+
+            box-shadow:
+                0 0 15px #ffb300;
+
+            animation:
+                fire .4s infinite alternate;
+        }
+
+
+        @keyframes fire {
+
+            to {
+
+                transform:
+                    rotate(-40deg)
+                    scale(1.2);
+            }
+
+        }
+
+
+        /* ===============================
+           MESSAGE
+        =============================== */
+
+        .message {
+
+            padding: 25px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,.6);
+
+            border:
+                2px solid
+                rgba(255,255,255,.8);
+
+            box-shadow:
+                0 15px 40px
+                rgba(100,60,100,.15);
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+            color: #684d72;
+
+            white-space: pre-line;
+
+            text-align: left;
+        }
+
+
+        .final {
+
+            margin-top: 20px;
+
+            color: #ff62a6;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            opacity: 0;
+
+            transform:
+                translateY(15px);
+
+            transition: 1s;
+        }
+
+
+        .final.show {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* ===============================
+           BALLOONS
+        =============================== */
+
+        .balloon {
+
+            position: fixed;
+
+            width: 50px;
+            height: 65px;
+
+            bottom: -100px;
+
+            border-radius: 50%;
+
+            z-index: 3;
+
+            pointer-events: none;
+
+            animation:
+                balloonUp
+                linear infinite;
+        }
+
+
+        .balloon::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 1px;
+            height: 80px;
+
+            top: 60px;
+            left: 25px;
+
+            background:
+                rgba(100,70,100,.4);
+        }
+
+
+        .balloon.a {
+
+            left: 5%;
+
+            background: #ff82b7;
+
+            animation-duration: 12s;
+        }
+
+
+        .balloon.b {
+
+            left: 25%;
+
+            background: #9c8cff;
+
+            animation-duration: 15s;
+
+            animation-delay: 2s;
+        }
+
+
+        .balloon.c {
+
+            right: 25%;
+
+            background: #ffd166;
+
+            animation-duration: 13s;
+
+            animation-delay: 1s;
+        }
+
+
+        .balloon.d {
+
+            right: 5%;
+
+            background: #71d9e8;
+
+            animation-duration: 16s;
+
+            animation-delay: 3s;
+        }
+
+
+        @keyframes balloonUp {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(-6deg);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-55vh)
+                    rotate(7deg);
+            }
+
+            100% {
+
+                transform:
+                    translateY(-120vh)
+                    rotate(-5deg);
+            }
+
+        }
+
+
+        /* ===============================
+           HEART
+        =============================== */
+
+        .heart {
+
+            position: fixed;
+
+            bottom: -30px;
+
+            z-index: 20;
+
+            pointer-events: none;
+
+            animation:
+                heartUp
+                linear forwards;
+        }
+
+
+        @keyframes heartUp {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    scale(.6);
+
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    scale(1.4);
+
+                opacity: 0;
+            }
+
+        }
+
+
+        /* ===============================
+           CONFETTI
+        =============================== */
+
+        .confetti {
+
+            position: fixed;
+
+            top: -20px;
+
+            z-index: 100;
+
+            width: 8px;
+            height: 14px;
+
+            pointer-events: none;
+
+            animation:
+                confettiFall
+                linear forwards;
+        }
+
+
+        @keyframes confettiFall {
+
+            to {
+
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+            }
+
+        }
+
+
+        /* ===============================
+           MOBILE
+        =============================== */
+
+        @media (max-width: 600px) {
+
+            .moon {
+
+                width: 80px;
+                height: 80px;
+
+                right: 5%;
+                top: 5%;
+            }
+
+
+            .card {
+
+                padding:
+                    28px 20px;
+
+                border-radius:
+                    28px;
+            }
+
+
+            .birthday {
+
+                padding:
+                    15px 5px;
+            }
+
+
+            .birthday-title {
+
+                font-size:
+                    48px;
+            }
+
+
+            .cake-area {
+
+                transform:
+                    scale(.85);
+
+                margin-top:
+                    15px;
+
+                margin-bottom:
+                    -5px;
+            }
+
+
+            .message {
+
+                padding:
+                    18px;
+
+                font-size:
+                    15px;
+
+                line-height:
+                    1.8;
+            }
+
+
+            .balloon {
+
+                width: 40px;
+                height: 55px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ===============================
+         BACKGROUND
+    =============================== -->
+
+    <div class="background">
+
+        <div class="moon"></div>
+
+        <div
+            class="stars"
+            id="stars"
+        ></div>
+
+        <div class="cloud one"></div>
+
+        <div class="cloud two"></div>
+
+    </div>
+
+
+    <!-- ===============================
+         BALLOONS
+    =============================== -->
+
+    <div class="balloon a"></div>
+    <div class="balloon b"></div>
+    <div class="balloon c"></div>
+    <div class="balloon d"></div>
+
+
+    <!-- ===============================
+         APP
+    =============================== -->
+
+    <main class="app">
+
+
+        <!-- ==========================
+             OPENING
+        =========================== -->
+
+        <section
+            class="screen active"
+            id="opening"
+        >
+
+            <div class="card">
+
+
+                <!-- BEAR -->
+
+                <div class="bear">
+
+                    <div class="ear left"></div>
+
+                    <div class="ear right"></div>
+
+                    <div class="eye left"></div>
+
+                    <div class="eye right"></div>
+
+                    <div class="blush left"></div>
+
+                    <div class="blush right"></div>
+
+                    <div class="nose"></div>
+
+                    <div class="mouth"></div>
+
+                </div>
+
+
+                <div class="small">
+                    psst... ada kejutan! 👀
+                </div>
+
+
+                <h1>
+                    Hai Cellin! 💕
+                </h1>
+
+
+                <p class="subtitle">
+
+                    Ada sesuatu yang lucu
+                    dan spesial untuk lu.
+
+                    <br>
+
+                    Tapi lu harus buka dulu! 🎁
+
+                </p>
+
+
+                <button
+                    class="btn"
+                    id="openBtn"
+                >
+                    Buka Kejutan ✨
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             BIRTHDAY
+        =========================== -->
+
+        <section
+            class="screen"
+            id="birthday"
+        >
+
+            <div class="birthday">
+
+
+                <div class="birthday-title">
+
+                    HAPPY<br>
+
+                    BIRTHDAY 🎉
+
+                </div>
+
+
+                <div
+                    class="name"
+                    id="name"
+                >
+                    Untuk Cellin Putri Rifani 💖
+                </div>
+
+
+                <!-- CAKE -->
+
+                <div class="cake-area">
+
+                    <div class="cake">
+
+
+                        <div
+                            class="candle one"
+                        >
+
+                            <div class="fire"></div>
+
+                        </div>
+
+
+                        <div
+                            class="candle two"
+                        >
+
+                            <div class="fire"></div>
+
+                        </div>
+
+
+                        <div
+                            class="candle three"
+                        >
+
+                            <div class="fire"></div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    class="message"
+                    id="message"
+                ></div>
+
+
+                <div
+                    class="final"
+                    id="final"
+                >
+
+                    🧸💗
+
+                    Happy terus ya Cell!
+
+                    Jangan pernah merasa sendiri,
+
+                    because I'm here. ❤️
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+
+        /* =================================================
+           NAMA
+        ================================================= */
+
+
+        const person =
+            "Cellin Putri Rifani ❤️";
+
+
+        /* =================================================
+           PESAN
+        ================================================= */
+
+
+        const message = `
+
+Semoga di usia baru saat ini,
+
+lu selalu diberikan kesehatan,
+kebahagiaan, makin sukses,
+dan makin cantik yaa hahaha. 😆💗
+
+Dan semoga satu persatu
+impian lu dapat tercapai yakk. ✨
+
+Semoga lu selalu dikelilingi
+orang-orang baik...
+
+Kayak gua wkwkw. 😎😂
+
+Happy terus ya Cell,
+dan jangan pernah merasa sendiri,
+
+because I'm here. 
+
+Sekali lagi...
+
+HAPPY BIRTHDAY! 🎂🎉
+
+Semoga semua hal baik
+datang ke kehidupan lu.
+
+Dan semoga senyum lu
+selalu ada setiap harinya. 
+`;
+
+
+        /* =================================================
+           ELEMENT
+        ================================================= */
+
+
+        const opening =
+            document.getElementById(
+                "opening"
+            );
+
+
+        const birthday =
+            document.getElementById(
+                "birthday"
+            );
+
+
+        const openBtn =
+            document.getElementById(
+                "openBtn"
+            );
+
+
+        const name =
+            document.getElementById(
+                "name"
+            );
+
+
+        const messageBox =
+            document.getElementById(
+                "message"
+            );
+
+
+        const final =
+            document.getElementById(
+                "final"
+            );
+
+
+        name.textContent =
+            "Untuk " + person;
+
+
+        /* =================================================
+           STARS
+        ================================================= */
+
+
+        const stars =
+            document.getElementById(
+                "stars"
+            );
+
+
+        for (
+            let i = 0;
+            i < 120;
+            i++
+        ) {
+
+            const star =
+                document.createElement(
+                    "div"
+                );
+
+
+            star.className =
+                "star";
+
+
+            star.style.left =
+                Math.random() * 100
+                + "%";
+
+
+            star.style.top =
+                Math.random() * 100
+                + "%";
+
+
+            star.style.animationDuration =
+                (
+                    2 +
+                    Math.random() * 4
+                ) + "s";
+
+
+            star.style.animationDelay =
+                Math.random() * 5
+                + "s";
+
+
+            stars.appendChild(
+                star
+            );
+
+        }
+
+
+        /* =================================================
+           OPEN SURPRISE
+        ================================================= */
+
+
+        openBtn.addEventListener(
+            "click",
+            () => {
+
+                opening.classList.remove(
+                    "active"
+                );
+
+
+                setTimeout(
+                    () => {
+
+                        birthday.classList.add(
+                            "active"
+                        );
+
+
+                        createConfetti(
+                            170
+                        );
+
+
+                        createHearts(
+                            25
+                        );
+
+
+                        typeMessage();
+
+                    },
+                    700
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           TYPING MESSAGE
+        ================================================= */
+
+
+        let index = 0;
+
+
+        function typeMessage() {
+
+            if (
+                index <
+                message.length
+            ) {
+
+                messageBox.textContent +=
+                    message.charAt(index);
+
+
+                index++;
+
+
+                setTimeout(
+                    typeMessage,
+                    35
+                );
+
+            }
+
+            else {
+
+                setTimeout(
+                    () => {
+
+                        final.classList.add(
+                            "show"
+                        );
+
+
+                        createConfetti(
+                            80
+                        );
+
+
+                        createHearts(
+                            15
+                        );
+
+                    },
+                    800
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           CONFETTI
+        ================================================= */
+
+
+        function createConfetti(
+            amount
+        ) {
+
+            const colors = [
+
+                "#ff70ad",
+                "#a98bff",
+                "#ffd166",
+                "#71d9e8",
+                "#ffffff"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < amount;
+                i++
+            ) {
+
+                const piece =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                piece.className =
+                    "confetti";
+
+
+                piece.style.left =
+                    Math.random() * 100
+                    + "vw";
+
+
+                piece.style.background =
+                    colors[
+                        Math.floor(
+                            Math.random()
+                            *
+                            colors.length
+                        )
+                    ];
+
+
+                piece.style.animationDuration =
+                    (
+                        3 +
+                        Math.random() * 4
+                    ) + "s";
+
+
+                piece.style.animationDelay =
+                    Math.random() * 2
+                    + "s";
+
+
+                document.body.appendChild(
+                    piece
+                );
+
+
+                setTimeout(
+                    () => {
+
+                        piece.remove();
+
+                    },
+                    8000
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           FLOATING HEARTS
+        ================================================= */
+
+
+        function createHearts(
+            amount
+        ) {
+
+            for (
+                let i = 0;
+                i < amount;
+                i++
+            ) {
+
+                setTimeout(
+                    () => {
+
+                        const heart =
+                            document.createElement(
+                                "div"
+                            );
+
+
+                        heart.className =
+                            "heart";
+
+
+                        heart.textContent =
+                            Math.random() > .5
+                                ? "💗"
+                                : "💖";
+
+
+                        heart.style.left =
+                            Math.random() * 100
+                            + "vw";
+
+
+                        heart.style.fontSize =
+                            (
+                                15 +
+                                Math.random() * 15
+                            ) + "px";
+
+
+                        heart.style.animationDuration =
+                            (
+                                5 +
+                                Math.random() * 5
+                            ) + "s";
+
+
+                        document.body.appendChild(
+                            heart
+                        );
+
+
+                        setTimeout(
+                            () => {
+
+                                heart.remove();
+
+                            },
+                            10000
+                        );
+
+                    },
+                    i * 200
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           TOUCH SPARKLE
+        ================================================= */
+
+
+        document.addEventListener(
+            "pointerdown",
+            (event) => {
+
+                if (
+                    !birthday.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                sparkle(
+                    event.clientX,
+                    event.clientY
+                );
+
+            }
+        );
+
+
+        function sparkle(
+            x,
+            y
+        ) {
+
+            const symbols = [
+
+                "✨",
+                "💗",
+                "⭐",
+                "💕"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 8;
+                i++
+            ) {
+
+                const item =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                item.textContent =
+                    symbols[
+                        Math.floor(
+                            Math.random()
+                            *
+                            symbols.length
+                        )
+                    ];
+
+
+                item.style.position =
+                    "fixed";
+
+
+                item.style.left =
+                    x + "px";
+
+
+                item.style.top =
+                    y + "px";
+
+
+                item.style.zIndex =
+                    "200";
+
+
+                item.style.pointerEvents =
+                    "none";
+
+
+                document.body.appendChild(
+                    item
+                );
+
+
+                const angle =
+                    Math.random()
+                    * Math.PI
+                    * 2;
+
+
+                const distance =
+                    40 +
+                    Math.random() * 70;
+
+
+                const targetX =
+                    Math.cos(angle)
+                    * distance;
+
+
+                const targetY =
+                    Math.sin(angle)
+                    * distance;
+
+
+                item.animate(
+
+                    [
+                        {
+
+                            transform:
+                                "translate(0,0) scale(.5)",
+
+                            opacity: 1
+
+                        },
+
+                        {
+
+                            transform:
+                                `translate(
+                                    ${targetX}px,
+                                    ${targetY}px
+                                )
+                                scale(1.3)`,
+
+                            opacity: 0
+
+                        }
+
+                    ],
+
+                    {
+
+                        duration:
+                            800 +
+                            Math.random() * 400,
+
+                        easing:
+                            "ease-out"
+
+                    }
+
+                );
+
+
+                setTimeout(
+                    () => {
+
+                        item.remove();
+
+                    },
+                    1400
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```
